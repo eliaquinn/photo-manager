@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="icon" type="imagem/png" href="../favicon/favicon.png"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.user.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" >
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #b10c43, #d133a2);
+            height: 100vh;
+        }
+
+        .forgot-password {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+            padding: 20px;
+        }
+
+        .forgot-password #btn-login {
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: #841688;
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .forgot-password #btn-login:hover {
+            border: 2px solid #5e0f61;
+        }
+
+        .forgot-password #btn-login:focus {
+            background-color: #721375;
+        }
+
+        .forgot-password h1 {
+            text-align: center;
+            border-bottom: 1px solid #b3b3b3;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 22pt;
+            color: #333;
+        }
+
+        .forgot-password p {
+            font-size: 12pt;
+            padding-bottom: 10px;
+            color: #333;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form class="forgot-password" method="get">
+            <h1>LOGO <i class="far fa-image"></i></h1>
+            
+            <p>Enter your email address registered in your LOGO account</p>
+
+            <div class="login-field">
+                <label for="forgot-pwd">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </label>
+                <input type="text" name="forgot-pwd" placeholder="type your email">
+            </div>
+
+            <button id="btn-login"><i class="far fa-paper-plane"></i> Send</button>
+
+            <a href="../index.html">Back</a>
+        </form>
+    </section>
+</body>
+</html>

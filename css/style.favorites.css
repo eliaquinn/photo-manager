@@ -1,0 +1,31 @@
+.favorites {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
+    height: calc(100% - 60px);
+    gap: 10px;
+    padding: 60px 50px 8px;
+}
+
+.cards-favorites {
+    position: relative;
+    box-shadow: 1px 1px 4px #333;
+    border-radius: 10px;
+}
+
+.cards-favorites .favorites-gallery {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cards-favorites i {
+    position: absolute;
+    z-index: 100;
+    color: #eb1313;
+    font-size: 18pt;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}

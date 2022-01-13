@@ -1,0 +1,52 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 350px;
+    height: calc(100% - 60px);
+    gap: 10px;
+    padding: 60px 50px 8px;
+}
+
+.cards-photo {
+    position: relative;
+    box-shadow: 1px 1px 4px #333;
+    border-radius: 10px;
+}
+
+.cards-photo .photo-gallery {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cards-photo .tools {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .5);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.cards-photo:hover .tools {
+    display: block;
+}
+
+.cards-photo .tools ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.cards-photo .tools ul li {
+    display: inline-block;
+    color: #fff;
+    font-size: 15pt;
+    margin: 0 5px;
+}
+
+.cards-photo .tools ul li i {
+    cursor: pointer;
+}
