@@ -1,22 +1,28 @@
-const userField = document.getElementById('user-login-field')
-const pswField = document.getElementById('psw-login-field')
-const btnLogin = document.getElementById('btn-login')
-
-function fieldListener (element, event) {
-    element.addEventListener(event, () => {
-        this.getField = element.value
-        if(this.getField == 'teste') {
-            return;
-        }
-        if(this.getField == 'teste123') {
-            btnLogin.onclick = () => window.location.href = 'http://127.0.0.1:5500/pages/home.html'
-        }
-    })
+const connApi = async function (endpoint, email, pwd) {
+    await fetch(`https://61e189f363f8fc0017618d00.mockapi.io/api/v1/${endpoint}`)
+    .then(res => res.json())
+    .then(data => getLoginApi(data, email, pwd))
 }
 
-function validationUser () {
-
+const getLoginApi = function (data, email, pwd) {
+    data.forEach(element => {
+        if(element['email'] === email && element['password'] === pwd){
+            successLogin()
+            clearField(emailField ,pwdField)
+        }
+    });
 }
 
-fieldListener(userField, 'blur')
-fieldListener(pswField, 'blur')
+const successLogin = function () {
+    alert('login feito com sucesso!')
+    window.location.href = 'http://127.0.0.1:5500/pages/home.html'
+}
+
+const dataUserLogin = function (userLogin) {
+    connApi('auth', userLogin['email'], userLogin['password'])
+}
+
+const clearField = function (c1, c2) {
+    c1.value = '',
+    c2.value = ''
+}
