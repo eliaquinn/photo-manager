@@ -45,7 +45,7 @@ nav ul li div {
 
 .menu-user {
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     padding: 10px;
@@ -59,6 +59,10 @@ nav ul li div {
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.menu-user--show {
+    display: flex;
 }
 
 .menu-user::after {
