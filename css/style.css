@@ -17,7 +17,6 @@
 
 .cards {
     position: relative;
-    box-shadow: 1px 1px 4px #333;
     border-radius: 10px;
 }
 
@@ -32,8 +31,22 @@
     position: absolute;
     margin: 10px;
     color: #fff;
-    cursor: pointer;
     font-size: 15pt;
+}
+
+.cards p input {
+    display: block;
+}
+
+.cards p label .empty {
+    cursor: pointer;
+    display: block;
+}
+
+.cards p label .full {
+    cursor: pointer;
+    color: #f00;
+    display: block;
 }
 
 .l-1 {

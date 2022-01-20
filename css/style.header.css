@@ -35,10 +35,15 @@ nav ul li a {
     font-weight: 300;
 }
 
-nav ul li div {
+nav ul li #btn-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
     font-size: 21pt;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* menu */

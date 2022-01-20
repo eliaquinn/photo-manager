@@ -14,7 +14,7 @@ const getLoginApi = function (data, email, pwd) {
 }
 
 const successLogin = function () {
-    alert('login feito com sucesso!')
+    // alert('login feito com sucesso!')
     window.location.href = 'http://127.0.0.1:5500/pages/home.html'
 }
 
